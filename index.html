@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 80vw;
+            height: 500px;
+            /* background-color: magenta; */
+            margin: auto;
+            display: grid;
+            grid-template-columns:auto auto auto auto;
+            grid-template-rows: auto auto auto auto;
+            grid-gap: 10px;
+            padding: 10px;
+            border: 2px solid white;
+            border-radius: 14px;
+            box-shadow: 2px 2px 10px;
+        }
+        .box{
+            border-radius: 14px;
+            box-shadow: 2px 2px 10px;
+            background-color: lightpink;
+            text-align: center;
+        }
+        @media only screen and (max-width: 320px){
+            .container{
+                grid-template-columns: auto;
+
+            }
+        }
+
+        @media only screen and (min-width: 321px){
+            .container{
+                grid-template-columns: auto;
+            }
+        }
+
+        @media only screen and (min-width: 1024px){
+            .container{
+                grid-template-columns: auto auto auto auto;
+            }
+            .item1{
+                grid-column: 1/3;
+            }
+            .item2{
+                grid-column: 3/5;
+            }
+            .item3{
+                grid-column:  1/5;
+                grid-row: 2/4;
+            }
+            .item4,.item5,.item6{
+                grid-row: 4/5;
+                width: auto;
+            }
+            .item7,.item8,.item9,.item10{
+                grid-row: 5/6;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box item1">hallow1</div>
+        <div class="box item2">hallow2</div>
+        <div class="box item3">hallow3</div>
+        <div class="box item4">hallow4</div>
+        <div class="box item5">hallow5</div>
+        <div class="box item6">hallow6</div>
+        <div class="box item7">hallow7</div>
+        <div class="box item8">hallow8</div>
+        <div class="box item9">hallow9</div>
+        <div class="box item10">hallow10</div>
+    </div>
+</body>
+
+</html>
